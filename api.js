@@ -2,7 +2,9 @@
 //TODO Criar uma rota de authenticação de usuários para retornar o token da api
 //TODO Criar uma rota de obtenção de informações se vai chover no destino desejado pelo usuário
 
+require('dotenv/config')
 const Hapi = require("hapi");
+
 const WheaterRoutes = require("./routes/apiWeather");
 
 const app = Hapi.Server({
@@ -15,7 +17,7 @@ function mapRoutes(instance, methods) {
 }
 
 const main = async () => {
-  app.route([...mapRoutes(new WheaterRoutes(), WheaterRoutes.methods())]);
+  app.route([...mapRoutes(new WheaterRoutes(process.env.WEATHER_API_KEY), WheaterRoutes.methods())]);
 
   await app.start();
   console.log("Server running on %s", app.info.uri);
