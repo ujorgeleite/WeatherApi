@@ -25,7 +25,7 @@ describe("Api Weather tests", function() {
   it("Get Condition", async () => {
     const result = await app.inject({
       method: "GET",
-      url: "/condition?city=viamao",
+      url: "/condition/viamao",
     });
 
     const expected = {
