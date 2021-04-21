@@ -22,7 +22,7 @@ describe("Api Weather tests", function() {
     app.stop();
   });
 
-  it("Get Condition", async () => {
+it("Get Condition", async () => {
     const result = await app.inject({
       method: "GET",
       url: "/condition/viamao",
