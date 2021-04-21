@@ -18,5 +18,12 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
+        env:
+          MONGODB_DATABASE_ALIAS_CONNECTION: ${{secrets.MONGODB_DATABASE_ALIAS_CONNECTION}}
+          MONGODB_DATABASE_DATABASE: ${{secrets.MONGODB_DATABASE_DATABASE}}
+          MONGODB_DATABASE_PWD: ${{secrets.MONGODB_DATABASE_PWD}}
+          MONGODB_DATABASE_URL: ${{secrets.MONGODB_DATABASE_URL}}
+          MONGODB_DATABASE_USER: ${{secrets.MONGODB_DATABASE_USER}}
+          WEATHER_API_KEY: ${{secrets.WEATHER_API_KEY}}
       - run: npm i
       - run: npm run t
