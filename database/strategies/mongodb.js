@@ -11,11 +11,11 @@ const STATUS = {
 class MongoDb extends ICrud {
     constructor(params) {
         super();
-        const { database, user, pwd, url, aliasConnection } = params;
+        const { url } = params;
         
         this._users = null;
         this._driver = null;
-        this.mongodbUrl = `${aliasConnection}${user}:${pwd}@${url}/${database}`
+        this.mongodbUrl = url
         
     }
     

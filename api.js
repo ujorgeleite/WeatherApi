@@ -9,11 +9,7 @@ const Vision = require("@hapi/vision");
 
 
 const params = {
-  database: process.env.MONGODB_DATABASE_DATABASE,
-  user:process.env.MONGODB_DATABASE_USER,
-  pwd:process.env.MONGODB_DATABASE_PWD,
-  url:process.env.MONGODB_DATABASE_URL,
-  aliasConnection:process.env.MONGODB_DATABASE_ALIAS_CONNECTION
+  url:process.env.MONGODB_DATABASE_URL
 }
 
 const { Strategy, Mongodb } = require("./database/index");
