@@ -2,10 +2,10 @@
   "name": "sources",
   "version": "1.0.0",
   "description": "API to get weather condition for destiny passed by the user, only for authenticated users, by google APIs.",
-  "main": "api.js",
+  "main": "./src/api.js",
   "scripts": {
-    "t": "clear && mocha ./tests/*.spec.js",
-    "s": "node api.js"
+    "t": "clear && mocha ./src/tests/*.spec.js",
+    "s": "node ./src/api.js"
   },
   "repository": {
     "type": "git",
